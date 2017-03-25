@@ -1,0 +1,48 @@
+----------------------------- static: -----------------------
+	USER:	          2us		SYSTEM:	          2us	REAL:	          1us  |--- create book
+	USER:	       5310us		SYSTEM:	         80us	REAL:	       7982us  |--- insert 1000
+	USER:	         17us		SYSTEM:	          1us	REAL:	         17us  |--- find opt
+	USER:	         22us		SYSTEM:	          1us	REAL:	         23us  |--- remove opt
+	USER:	       1940us		SYSTEM:	        106us	REAL:	       2212us  |--- sort
+	USER:	        104us		SYSTEM:	         22us	REAL:	        127us  |--- find pes
+	USER:	        155us		SYSTEM:	         28us	REAL:	        140us  |--- remove pes
+	USER:	          1us		SYSTEM:	          2us	REAL:	          1us  |--- create book
+	USER:	        398us		SYSTEM:	         19us	REAL:	        418us  |--- insert 1000
+	USER:	          1us		SYSTEM:	          1us	REAL:	          2us  |--- find opt
+	USER:	          2us		SYSTEM:	          1us	REAL:	          2us  |--- remove opt
+	USER:	        561us		SYSTEM:	          3us	REAL:	        566us  |--- sort
+	USER:	          3us		SYSTEM:	          3us	REAL:	          3us  |--- find pes
+	USER:	          2us		SYSTEM:	          1us	REAL:	          2us  |--- remove pes
+----------------------------- shared: -----------------------
+	USER:	          2us		SYSTEM:	          3us	REAL:	          2us  |--- create book
+	USER:	       6463us		SYSTEM:	         73us	REAL:	       6537us  |--- insert 1000
+	USER:	         33us		SYSTEM:	          1us	REAL:	         34us  |--- find opt
+	USER:	         62us		SYSTEM:	          2us	REAL:	         64us  |--- remove opt
+	USER:	       1699us		SYSTEM:	          7us	REAL:	       1707us  |--- sort
+	USER:	         30us		SYSTEM:	          3us	REAL:	         31us  |--- find pes
+	USER:	         34us		SYSTEM:	          1us	REAL:	         35us  |--- remove pes
+	USER:	          3us		SYSTEM:	          2us	REAL:	          3us  |--- create book
+	USER:	        519us		SYSTEM:	         24us	REAL:	        543us  |--- insert 1000
+	USER:	          3us		SYSTEM:	          1us	REAL:	          3us  |--- find opt
+	USER:	          3us		SYSTEM:	          1us	REAL:	          3us  |--- remove opt
+	USER:	        571us		SYSTEM:	          2us	REAL:	        573us  |--- sort
+	USER:	          2us		SYSTEM:	          3us	REAL:	          3us  |--- find pes
+	USER:	          1us		SYSTEM:	          2us	REAL:	          3us  |--- remove pes
+----------------------------- dynamic: -----------------------
+	USER:	          3us		SYSTEM:	          4us	REAL:	          3us  |--- create book
+	USER:	       6020us		SYSTEM:	         71us	REAL:	       6125us  |--- insert 1000
+	USER:	         25us		SYSTEM:	          1us	REAL:	         26us  |--- find opt
+	USER:	         28us		SYSTEM:	          1us	REAL:	         29us  |--- remove opt
+	USER:	       1535us		SYSTEM:	          6us	REAL:	       1542us  |--- sort
+	USER:	         24us		SYSTEM:	          2us	REAL:	         25us  |--- find pes
+	USER:	         27us		SYSTEM:	          1us	REAL:	         27us  |--- remove pes
+	USER:	          0us		SYSTEM:	          3us	REAL:	          1us  |--- create book
+	USER:	        751us		SYSTEM:	         65us	REAL:	        825us  |--- insert 1000
+	USER:	          5us		SYSTEM:	          1us	REAL:	          5us  |--- find opt
+	USER:	          2us		SYSTEM:	          0us	REAL:	          3us  |--- remove opt
+	USER:	       1064us		SYSTEM:	         19us	REAL:	       1124us  |--- sort
+	USER:	          2us		SYSTEM:	          3us	REAL:	          3us  |--- find pes
+	USER:	          2us		SYSTEM:	          2us	REAL:	          3us  |--- remove pes
+
+
+różne sposoby dodawania bibliotek skutkują różnym czasem wykonania

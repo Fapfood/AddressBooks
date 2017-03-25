@@ -1,0 +1,36 @@
+ubuntu@ubuntu:~/Desktop/lab1$ gdb ./bin/testy
+Reading symbols from ./bin/testy...(no debugging symbols found)...done.
+
+(gdb) run testy
+Starting program: /home/ubuntu/Desktop/lab1/bin/testy testy
+	USER:	          2us		SYSTEM:	          2us	REAL:	          1us  |--- create book
+	USER:	       4900us		SYSTEM:	         12us	REAL:	       4931us  |--- insert 1000
+	USER:	         19us		SYSTEM:	          2us	REAL:	         20us  |--- find opt
+	USER:	         24us		SYSTEM:	          1us	REAL:	         24us  |--- remove opt
+	USER:	       1239us		SYSTEM:	          3us	REAL:	       1243us  |--- sort
+	USER:	         20us		SYSTEM:	          2us	REAL:	         20us  |--- find pes
+	USER:	         26us		SYSTEM:	          1us	REAL:	         27us  |--- remove pes
+	USER:	          1us		SYSTEM:	          1us	REAL:	          1us  |--- create book
+	USER:	        410us		SYSTEM:	         19us	REAL:	        429us  |--- insert 1000
+	USER:	          2us		SYSTEM:	          2us	REAL:	          3us  |--- find opt
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0000000000401fb0 in removeNodeFromBook_T ()
+
+(gdb) generate-core-file
+warning: target file /proc/3921/cmdline contained unexpected null characters
+Saved corefile core.3921
+
+(gdb) bt
+#0  0x0000000000401fb0 in removeNodeFromBook_T ()
+#1  0x0000000000400c7a in bookOperations_T ()
+#2  0x0000000000400f17 in main ()
+
+Podmieniłem Nazwisko w linijce:
+
+removeNodeFromBook_T(contactBook_T, findNodeByKey_T(contactBook_T, "Webb", SURNAME));
+
+ponieważ remove musi dostać noda który na pewno jest w drzewie, a find nie znalazł noda i zwrócił NULL
+
+bt - komenda, by zobaczyć w wywołaniu której funkcji występuje segmentation fault
+widzimy, że removeNodeFromBook_T dostał zły argument
